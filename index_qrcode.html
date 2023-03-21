@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Saiba como gerar e obter um CPF válido. Veja como é fácil e seguro gerar um CPF válido para fins de testes."/>
-    <meta name="keywords" content="Gerador de CPF brasileiro, algoritmo de CPF, número de CPF válido, verificador de CPF, número de identificação brasileiro, formato de CPF, gerador de CPF aleatório, gerador de CPF online, banco de dados de CPF, regras de geração de CPF, números de teste de CPF, algoritmo de validação de CPF, API de gerador de CPF, download de gerador de CPF, ificador de número de CPF, software de gerador de CPF, gerador de CPF Brasil, algoritmo de gerador de CPF, gerador de CPF."/>
+    <meta name="description" content="Use o gerador de QRCode online para criar códigos QR gratuitos com informações personalizadas."/>
+    <meta name="keywords" content="Gerador de QRCode, Fabricante de QRCode, Criador de QRCode, Gerador de código de barras, Scanner de código, Gerador de matriz de dados, Scanner de QRCode, Sistema de pagamento, QRCode dinâmico."/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4101074959936183" crossorigin="anonymous"></script>
@@ -19,10 +19,11 @@
 
         gtag('config', 'G-3BLCYYJ7ZS');
     </script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style2.css">
-    <title>Gerador CPF válido | GeraFácil</title>
+    <title>Gerador de QRCode | GeraFácil</title>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                 <button type="button" class="navbar-burger" onclick="toggleSidebar()">
                     <i class='bx bx-menu'></i>
                 </button>
-                <img src="logo.png" alt="" class="navbar-logo">
+                <img src="logo.png" alt="Logo do site" class="navbar-logo">
             </header>
 
             <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
@@ -73,7 +74,7 @@
                 <button type="button" class="sidebar-burger" onclick="toggleSidebar()">
                     <i class='bx bx-menu'></i>
                 </button>
-                <img src="logo.png" alt="" class="sidebar-logo">
+                <img src="logo.png" alt="Logo do site" class="sidebar-logo">
             </header>
 
             <nav class="sidebar-menu">
@@ -109,39 +110,32 @@
         <div class="container-fluid" id="content-main">
           <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor">
                 <div>
-                    <h2>Gerador de CPF</h2>
-                    <div class="wrapper">
-                        <div class="input-box">
-                            <div class="style-cpf">
-                                <p id="cpf-input"></p>
-                                <span class="material-symbols-rounded">copy_all</span>
+                    <h2>Gerador de QRCode</h2>
+                    <form onsubmit="event.preventDefault(); generateQRCode();">
+                        <div class="wrapper">
+                            <div class="input-box">
+                                <input type="text" id="text">
                             </div>
+
+                            <button class="generate-btn">Gerar QRCode</button>
+                            <div id="qrcode"></div>
                         </div>
-                        <button class="generate-btn" onclick="gerarCPF()">Gerar CPF</button>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor" id="content">
                 <div class="box-content">
                   <div class="">
-                    <h1>Gerador de CPF</h1>
+                    <h1>Gerador de QRCode</h1>
                     <p>
-                        O Gerador de CPF é uma ferramenta que permite a criação de 
-                        números de CPF (Cadastro de Pessoa Física) de forma aleatória. 
-                        Essa ferramenta pode ser útil em diversas situações, como testes de sistemas, 
-                        criação de contas em sites ou redes sociais, dentre outras. Para gerar um novo 
-                        CPF basta clicar no botão "Gerar CPF".
+                        O QR Code é um código bidimensional que pode ser escaneado por dispositivos móveis 
+                        para fornecer informações sobre sites, produtos, serviços e promoções.
                     </p>
-                    <h1>O que é um Gerador de CPF?</h1>
+                    <h1>O que é um Gerador de QRCode?</h1>
                     <p>
-                       O Gerador de CPF funciona de maneira simples: ele utiliza um algoritmo 
-                       para gerar números de CPF aleatórios. Esses números não estão associados 
-                       a nenhuma pessoa física real e, portanto, não têm valor legal.
-
-                       Ao utilizar um Gerador de CPF, é importante lembrar que o número gerado 
-                       não pode ser utilizado para fins legais. Ele pode, no entanto, ser utilizado 
-                       em testes de sistemas, cadastro em sites que não exigem verificação de identidade, 
-                       dentre outras situações que não envolvam transações financeiras ou informações sensíveis.
+                        O Gerador QR Code é uma ferramenta online que permite criar 
+                        códigos QR personalizados para qualquer finalidade. Essa ferramenta é fácil e simples de usar. 
+                        Com o Gerador QR Code, é possível criar códigos para redirecionar para páginas da web.
                     </p>
                     </ul>
                   </div>
@@ -173,7 +167,7 @@
         </div>
       </footer>
     
-    <script type="text/javascript" src="index_cpf.js"></script>
+    <script type="text/javascript" src="index_qrcode.js"></script>
     <script type="text/javascript">
         const toggleSidebar = () => document.body.classList.toggle("open");
         const toggleMenuOpen = () => document.body.classList.toggle("open");

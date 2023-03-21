@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Saiba como gerar e obter um CPF válido. Veja como é fácil e seguro gerar um CPF válido para fins de testes."/>
-    <meta name="keywords" content="Gerador de CPF brasileiro, algoritmo de CPF, número de CPF válido, verificador de CPF, número de identificação brasileiro, formato de CPF, gerador de CPF aleatório, gerador de CPF online, banco de dados de CPF, regras de geração de CPF, números de teste de CPF, algoritmo de validação de CPF, API de gerador de CPF, download de gerador de CPF, ificador de número de CPF, software de gerador de CPF, gerador de CPF Brasil, algoritmo de gerador de CPF, gerador de CPF."/>
+    <meta name="description" content="O nosso Validador de CEP é uma ferramenta online gratuita que permite verificar a validade de um CEP (Código de Endereçamento Postal) em todo o Brasil. Verifique a precisão do seu CEP agora mesmo com o Validador de CEP!"/>
+    <meta name="keywords" content="Validar CEP, Consulta CEP, Verificação de CEP, Busca por CEP, Pesquisa de CEP, CEP válido, CEP incorreto, CEP inexistente, CEP do Brasil, Localização por CEP, Endereço pelo CEP, Rastreamento de CEP, Geolocalização por CEP."/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4101074959936183" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style2.css">
-    <title>Gerador CPF válido | GeraFácil</title>
+    <title>Validador de CEP: Verifique a validade do CEP em segundos | GeraFácil</title>
 </head>
 
 <body>
@@ -34,7 +34,6 @@
                 </button>
                 <img src="logo.png" alt="" class="navbar-logo">
             </header>
-
             <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
             <nav class="navbar-menu">
                 <button type="button">
@@ -60,11 +59,9 @@
                     <a href="/index_cep.html">
                         <span>Validador de CEP</span>
                     </a>
-                </button>
-                
+                </button>      
             </nav>
         </div>
-
     </nav>
 
     <nav class="sidebar">
@@ -75,7 +72,6 @@
                 </button>
                 <img src="logo.png" alt="" class="sidebar-logo">
             </header>
-
             <nav class="sidebar-menu">
                 <button type="button">
                     <i class='bx bx-key' ></i>
@@ -109,71 +105,68 @@
         <div class="container-fluid" id="content-main">
           <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor">
                 <div>
-                    <h2>Gerador de CPF</h2>
-                    <div class="wrapper">
-                        <div class="input-box">
-                            <div class="style-cpf">
-                                <p id="cpf-input"></p>
-                                <span class="material-symbols-rounded">copy_all</span>
+                    <h2>Validador de CEP</h2>
+                    <form onsubmit="event.preventDefault(); gerarCEP();">
+                        <div class="wrapper">
+                            <div class="input-box">
+                                <input type="text" placeholder="Digite o CEP" id="cep">
                             </div>
+
+                            <button class="generate-btn">Validar CEP</button>
+                            <div id="resultado"></div>
                         </div>
-                        <button class="generate-btn" onclick="gerarCPF()">Gerar CPF</button>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor" id="content">
                 <div class="box-content">
                   <div class="">
-                    <h1>Gerador de CPF</h1>
+                    <h1>Validador de CEP</h1>
                     <p>
-                        O Gerador de CPF é uma ferramenta que permite a criação de 
-                        números de CPF (Cadastro de Pessoa Física) de forma aleatória. 
-                        Essa ferramenta pode ser útil em diversas situações, como testes de sistemas, 
-                        criação de contas em sites ou redes sociais, dentre outras. Para gerar um novo 
-                        CPF basta clicar no botão "Gerar CPF".
+                      Ferramenta online para validar CEP. Essa funcionalidade tem como 
+                      objetivo validar um número de CEP, retornando as informações da 
+                      base de dados do Correios. Preencha o CEP que deseja validar e 
+                      clique no botão "Validar CEP".
                     </p>
-                    <h1>O que é um Gerador de CPF?</h1>
+                    <h1>O que é um validador de CEP?</h1>
                     <p>
-                       O Gerador de CPF funciona de maneira simples: ele utiliza um algoritmo 
-                       para gerar números de CPF aleatórios. Esses números não estão associados 
-                       a nenhuma pessoa física real e, portanto, não têm valor legal.
-
-                       Ao utilizar um Gerador de CPF, é importante lembrar que o número gerado 
-                       não pode ser utilizado para fins legais. Ele pode, no entanto, ser utilizado 
-                       em testes de sistemas, cadastro em sites que não exigem verificação de identidade, 
-                       dentre outras situações que não envolvam transações financeiras ou informações sensíveis.
+                        Um validador de CEP é uma ferramenta online que permite verificar 
+                        se o código postal inserido é válido e se está correto. Ele é muito 
+                        útil para quem precisa enviar ou receber encomendas, pois evita erros 
+                        de digitação que podem causar atrasos na entrega.
                     </p>
                     </ul>
                   </div>
                 </div>
+              </div>
             </div>
         </div>
     </div>
     <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-top">
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="about.html" class="footer-list-link">Sobre</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="termsofuse.html" class="footer-list-link">Termos de Uso</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="privacy.html" class="footer-list-link">Privacidade</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="contato.html" class="footer-list-link">Contato</a>
-              </li>
-            </ul>
-            <span class="copyright"
-              >&copy; 2023 WSLProg. All rights reserved.</span
-            >
-          </div>
+      <div class="footer-container">
+        <div class="footer-top">
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="about.html" class="footer-list-link">Sobre</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="termsofuse.html" class="footer-list-link">Termos de Uso</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="privacy.html" class="footer-list-link">Privacidade</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="contato.html" class="footer-list-link">Contato</a>
+            </li>
+          </ul>
+          <span class="copyright"
+            >&copy; 2023 WSLProg. All rights reserved.</span
+          >
         </div>
-      </footer>
+      </div>
+    </footer>
     
-    <script type="text/javascript" src="index_cpf.js"></script>
+    <script type="text/javascript" src="index_cep.js"></script>
     <script type="text/javascript">
         const toggleSidebar = () => document.body.classList.toggle("open");
         const toggleMenuOpen = () => document.body.classList.toggle("open");

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Use nosso Gerador de Senha Online para criar senhas fortes e seguras de maneira rápida e fácil. Proteja suas informações pessoais e evite violações de segurança."
+    />
+    <meta
+      name="keywords"
+      content="gerador de senha, senha forte, criar senha segura, Senha aleatória, Segurança de senha, Força da senha, Complexidade da senha, Gerenciador de senha, Proteção de senha, Verificador de força de senha, Senha alfanumérica, Senha com caracteres especiais, Senha numérica, Comprimento da senha, Medidor de força de senha."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas Personalizadas | GeraFácil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4101074959936183"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3BLCYYJ7ZS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3BLCYYJ7ZS");
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <header class="navbar-header">
+          <button type="button" class="navbar-burger" onclick="toggleSidebar()">
+            <i class="bx bx-menu"></i>
+          </button>
+          <img src="logo.png" alt="Logo do Site" class="navbar-logo" />
+        </header>
+
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+        <nav class="navbar-menu">
+          <button type="button">
+            <i class="bx bx-key"></i>
+            <a href="/index_senha.html">
+              <span>Gerador de Senha</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-credit-card"></i>
+            <a href="/index_cpf.html">
+              <span>Gerador de CPF</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-qr"></i>
+            <a href="/index_qrcode.html">
+              <span>Gerador de QRCode</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-location-plus"></i>
+            <a href="/index_cep.html">
+              <span>Validador de CEP</span>
+            </a>
+          </button>
+        </nav>
+      </div>
+    </nav>
+
+    <nav class="sidebar">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <button
+            type="button"
+            class="sidebar-burger"
+            onclick="toggleSidebar()"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <img src="logo.png" alt="Logo do Site" class="sidebar-logo" />
+        </header>
+
+        <nav class="sidebar-menu">
+          <button type="button">
+            <i class="bx bx-key"></i>
+            <a href="/index_senha.html">
+              <span>Gerador de Senha</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-credit-card"></i>
+            <a href="/index_cpf.html">
+              <span>Gerador de CPF</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-qr"></i>
+            <a href="/index_qrcode.html">
+              <span>Gerador de QRCode</span>
+            </a>
+          </button>
+          <button type="button">
+            <i class="bx bx-location-plus"></i>
+            <a href="/index_cep.html">
+              <span>Validador de CEP</span>
+            </a>
+          </button>
+        </nav>
+      </div>
+    </nav>
+
+    <div id="main">
+      <div class="container-fluid" id="content-main">
+        <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor">
+          <div>
+            <h2>Gerador de Senha</h2>
+            <div class="wrapper">
+              <div class="input-box">
+                <input type="text" disabled />
+                <span class="material-symbols-rounded">copy_all</span>
+              </div>
+              <div class="pass-indicator"></div>
+              <div class="pass-length">
+                <div class="details">
+                  <label class="title">Tamanho da Senha</label>
+                  <span></span>
+                </div>
+                <input type="range" min="1" max="30" value="15" step="1" />
+              </div>
+
+              <div class="pass-settings">
+                <label class="title">Configurações da Senha</label>
+                <ul class="options">
+                  <li class="option">
+                    <input type="checkbox" id="lowercase" checked />
+                    <label for="lowercase">Minúsculo (a-z)</label>
+                  </li>
+                  <li class="option">
+                    <input type="checkbox" id="uppercase" />
+                    <label for="uppercase">Maiúsculo (A-Z)</label>
+                  </li>
+                  <li class="option">
+                    <input type="checkbox" id="numbers" />
+                    <label for="numbers">Números (0-9)</label>
+                  </li>
+                  <li class="option">
+                    <input type="checkbox" id="symbols" />
+                    <label for="symbols">Símbolos (!-$^+)</label>
+                  </li>
+                  <li class="option">
+                    <input type="checkbox" id="exc-duplicate" />
+                    <label for="exc-duplicate">Excluir Duplicados</label>
+                  </li>
+                  <li class="option">
+                    <input type="checkbox" id="spaces" />
+                    <label for="spaces">Incluir Espaços</label>
+                  </li>
+                </ul>
+              </div>
+
+              <button class="generate-btn">Gerar Senha</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-3 container-decor" id="content">
+          <div class="box-content">
+            <div class="scroll-content">
+              <h1>Gerador de Senhas</h1>
+              <p>
+                Ferramenta online para gerar senhas seguras. O gerador de senhas
+                permite criar uma senha aleatória com diversas opções de acordo
+                com a necessidade. Deslize o botão de "Tamanho da Senha" para
+                automaticamente ir gerando um senha, caso queira trocar a senha
+                gerada, clique no botão "Gerar Senha".
+              </p>
+              <h1>O que é um Gerador de Senhas?</h1>
+              <p>
+                Um gerador de senhas é uma ferramenta que gera senhas aleatórias
+                e exclusivas para você. Essas senhas geralmente são compostas
+                por uma combinação de letras, números e símbolos. É possível
+                personalizar o comprimento e a complexidade da senha gerada,
+                tornando-a única e difícil de ser descoberta por hackers ou
+                programas maliciosos.
+              </p>
+              <br />
+              <h1>Por que você deve usar um Gerador de Senhas?</h1>
+              <p>
+                Senhas fracas são um risco significativo para a segurança de
+                suas informações pessoais. Muitas pessoas usam senhas simples,
+                como "123456" ou "password", que são fáceis de serem adivinhadas
+                ou descobertas por hackers. Usando um gerador de senhas, você
+                pode criar senhas complexas e exclusivas para cada uma de suas
+                contas, tornando-as muito mais difíceis de serem descobertas.
+              </p>
+              <br />
+              <h1>Dicas para criar senhas seguras</h1>
+              <p>
+                Criar senhas seguras pode parecer complicado, mas existem
+                algumas dicas simples que você pode seguir para tornar suas
+                senhas mais seguras:
+              </p>
+              <br />
+              <h1>Comprimento da senha</h1>
+              <p>
+                Quanto mais longa a senha, mais difícil será para um hacker
+                adivinhá-la ou descobri-la. Recomenda-se criar senhas com pelo
+                menos 12 caracteres.
+              </p>
+              <br />
+              <h1>Complexidade da senha</h1>
+              <p>
+                Senhas compostas por uma combinação de letras maiúsculas e
+                minúsculas, números e símbolos são mais difíceis de serem
+                descobertas. Por exemplo, em vez de usar "password", você pode
+                criar uma senha como "P@ssw0rd!".
+              </p>
+              <br />
+              <h1>Perguntas Frequentes:</h1>
+              <ul>
+                <li>1. Posso confiar em geradores de senhas online?</li>
+                <p>
+                  Sim, você pode confiar em geradores de senhas online desde que
+                  eles sejam de fontes confiáveis. Certifique-se de escolher um
+                  gerador de senhas respeitável e confiável que não armazene
+                  suas senhas ou informações pessoais.
+                </p>
+                <li>2. Como faço para lembrar de todas as minhas senhas?</li>
+                <p>
+                  Lembrar de todas as suas senhas pode ser complicado, mas
+                  existem algumas dicas que podem ajudá-lo a mantê-las
+                  organizadas. Você pode usar um gerenciador de senhas para
+                  armazenar todas as suas senhas com segurança ou criar uma
+                  lista física delas, guardada em um local seguro.
+                </p>
+                <li>3. Qual é o comprimento mínimo recomendado para senhas?</li>
+                <p>
+                  Recomenda-se criar senhas com pelo menos 12 caracteres. Quanto
+                  mais longa a senha, mais difícil será para um hacker
+                  adivinhá-la ou descobri-la.
+                </p>
+                <li>4. Devo mudar minhas senhas regularmente?</li>
+                <p>
+                  Sim, é recomendável mudar suas senhas regularmente, pelo menos
+                  a cada três meses. Isso ajuda a aumentar a segurança de suas
+                  contas, pois torna mais difícil para um invasor descobrir ou
+                  acessar suas senhas antigas.
+                </p>
+                <li>
+                  5. O que devo fazer se suspeitar que minha senha foi
+                  comprometida?
+                </li>
+                <p>
+                  Se você suspeita que sua senha foi comprometida, altere-a
+                  imediatamente. Verifique também suas contas para verificar se
+                  há atividades suspeitas. Se você notar algo incomum, entre em
+                  contato com a equipe de suporte da conta para obter
+                  assistência.
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="about.html" class="footer-list-link">Sobre</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="termsofuse.html" class="footer-list-link">Termos de Uso</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="privacy.html" class="footer-list-link">Privacidade</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="contato.html" class="footer-list-link">Contato</a>
+            </li>
+          </ul>
+          <span class="copyright"
+            >&copy; 2023 WSLProg. All rights reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="index_senha.js"></script>
+    <script type="text/javascript">
+      const toggleSidebar = () => document.body.classList.toggle("open");
+      const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>
+
+<!-- 
+    Fonte de ícones usada: https://boxicons.com/
+    Fonte usada: Material Symbols Rounded - https://fonts.google.com/specimen/Material+Symbols+Rounded
+-->
+<!-- 
+    Este site é um gerador de senhas seguras e personalizadas. Ele também inclui outras ferramentas, como um gerador de CPF, gerador de QRCode e validador de CEP. 
+-->
+<!-- 
+    Desenvolvido por: Wesley Ramos Eufrasio
+-->
