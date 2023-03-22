@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeraFácil - Gerador e Validador de Dados Online</title>
+	<meta name="description" content="Gere e valide dados online facilmente com o GeraFácil. Gerador de CPF, CNPJ, RG, CEP e muito mais. Experimente agora!">
+	<meta name="keywords" content="gerador de CPF, gerador de CNPJ, gerador de RG, gerador de CEP, validador de CPF, validador de CNPJ, validador de RG, validador de CEP, gerador de dados online">
+	<meta name="author" content="GeraFácil">
+	<meta name="robots" content="index, follow">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4101074959936183" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BLCYYJ7ZS"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -17,82 +24,177 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="style_index.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+        <div class="navbar-inner">
+            <header class="navbar-header">
+                <button type="button" class="navbar-burger" onclick="toggleSidebar()">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <a href="/index.html">
+                    <img src="logo.png" alt="Logo do Site" class="navbar-logo img-responsive">
+                </a>
+            </header>
 
-        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-            <span class="material-icons">Menu</span>
-        </button>
-
-        <h1 class="navbar-title">WSLProg</h1>
-        <nav class="navbar-menu">
-            <a href="/index_cpf.html">
-                <button type="button" class="active">Gerador de CPF</button>
-            </a>
-            
-        </nav>
+            <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+            <nav class="navbar-menu">
+                <button type="button">
+                    <i class='bx bx-key' ></i>
+                    <a href="/index_senha.html">
+                        <span>Gerador de Senha</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-credit-card' ></i>
+                    <a href="/index_cpf.html">
+                        <span>Gerador de CPF</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-qr' ></i>
+                    <a href="/index_qrcode.html">
+                        <span>Gerador de QRCode</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-location-plus' ></i>
+                    <a href="/index_cep.html">
+                        <span>Validador de CEP</span>
+                    </a>
+                </button>
+                
+            </nav>
+        </div>
 
     </nav>
 
-    <div class="container">
-        <h2>Gerador de Senha</h2>
-        <div class="wrapper">
-            <div class="input-box">
-                <input type="text" disabled>
-                <span class="material-symbols-rounded">copy_all</span>
-            </div>
-            <div class="pass-indicator"></div>
-            <div class="pass-length">
-                <div class="details">
-                    <label class="title">Tamanho da Senha</label>
-                    <span></span>
-                </div>
-                <input type="range" min="1" max="30" value="15" step="1">
-            </div>
+    <nav class="sidebar">
+        <div class="sidebar-inner">
+            <header class="sidebar-header">
+                <button type="button" class="sidebar-burger" onclick="toggleSidebar()">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <a href="/index.html">
+                    <img src="logo.png" alt="Logo do Site" class="sidebar-logo">
+                </a>
+            </header>
 
-            <div class="pass-settings">
-                <label class="title">Configurações da Senha</label>
-                <ul class="options">
-                    <li class="option">
-                        <input type="checkbox" id="lowercase" checked>
-                        <label for="lowercase">Minúsculo (a-z)</label>
-                    </li>
-                    <li class="option">
-                        <input type="checkbox" id="uppercase">
-                        <label for="uppercase">Maiúsculo (A-Z)</label>
-                    </li>
-                    <li class="option">
-                        <input type="checkbox" id="numbers">
-                        <label for="numbers">Números (0-9)</label>
-                    </li>
-                    <li class="option">
-                        <input type="checkbox" id="symbols">
-                        <label for="symbols">Símbolos (!-$^+)</label>
-                    </li>
-                    <li class="option">
-                        <input type="checkbox" id="exc-duplicate">
-                        <label for="exc-duplicate">Excluir Duplicados</label>
-                    </li>
-                    <li class="option">
-                        <input type="checkbox" id="spaces">
-                        <label for="spaces">Incluir Espaços</label>
-                    </li>
-                </ul>
-            </div>
+            <nav class="sidebar-menu">
+                <button type="button">
+                    <i class='bx bx-key' ></i>
+                    <a href="/index_senha.html">
+                        <span>Gerador de Senha</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-credit-card' ></i>
+                    <a href="/index_cpf.html">
+                        <span>Gerador de CPF</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-qr' ></i>
+                    <a href="/index_qrcode.html">
+                        <span>Gerador de QRCode</span>
+                    </a>
+                </button>
+                <button type="button">
+                    <i class='bx bx-location-plus' ></i>
+                    <a href="/index_cep.html">
+                        <span>Validador de CEP</span>
+                    </a>
+                </button>
 
+            </nav>
 
-
-            <button class="generate-btn">Gerar Senha</button>
 
         </div>
+    </nav>
+    <div class="col">
+        <div class="card shadow-sm index">
+            <a href="/index.html">
+                <img src="logo_index.png" alt="Imagem da Logo GeraFácil na index" width="100%" height="225">
+            </a>
+        </div>
     </div>
-    
-    <script type="text/javascript" src="index.js">
+    <div class="container-fluid" id="content-main">
+        <div class="" id="content">
+            <div class="card-body text-center">
+        <h5>Bem-vindo ao GeraFácil, o seu destino online para todas as suas necessidades de geração e validação de dados. 
+        Com uma ampla variedade de ferramentas úteis disponíveis em nosso site, gerar e validar dados nunca foi tão fácil. 
+        Economize tempo e esforço ao criar números aleatórios, CPFs, CNPJs, CEPs e outros tipos de dados com nossas ferramentas especializadas. 
+        Nossa plataforma é intuitiva e fácil de usar, permitindo que você gere e valide dados em poucos cliques. Seja para fins pessoais ou profissionais, 
+        o GeraFácil é a solução ideal para gerar e validar dados online com rapidez e eficiência. Otimize suas tarefas de geração de dados com o GeraFácil!</h5>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h2 class="index-title"> Geradores mais acessados </h2>
+    <div id="main">
+        <div class="container-fluid" id="content-main">
+            <div class="" id="content">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <a href="index_senha.html">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="pass_generator.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                                <div class="card-body text-center">
+                                    <h6 class="card-text">Gerador de Senha | GeraFácil</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="index_cpf.html">
+                        <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="gerador_cpf.png" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                            <div class="card-body text-center">
+                            <h6 class="card-text">Gerador de CPF | GeraFácil</h6>
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    <a href="index_qrcode.html">
+                        <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="gerador_qr.png" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                            <div class="card-body text-center">
+                            <h6 class="card-text">Gerador de QRCode | GeraFácil</h6>
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="about.html" class="footer-list-link">Sobre</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="termsofuse.html" class="footer-list-link">Termos de Uso</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="privacy.html" class="footer-list-link">Privacidade</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contato.html" class="footer-list-link">Contato</a>
+                    </li>
+                </ul>
+                <span class="copyright">&copy; 2023 WSLProg. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        const toggleSidebar = () => document.body.classList.toggle("open");
         const toggleMenuOpen = () => document.body.classList.toggle("open");
     </script>
 </body>
